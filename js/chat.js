@@ -16,10 +16,9 @@
 
         connectToServer: function() {
 
-            var url = window.location.origin.replace(/^http/, "ws"),
-                host = url + ":3210";
+            var host = window.location.origin.replace(/^http/, "ws");
 
-            this.socket = new WebSocket(host);
+            this.socket = new WebSocket(host + ":3000");
             this.socket.onmessage = this.displayMessage.bind(this);
 
         },
