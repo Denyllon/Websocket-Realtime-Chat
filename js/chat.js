@@ -18,7 +18,7 @@
 
             var host = window.location.origin.replace(/^http/, "ws");
 
-            this.socket = new WebSocket(host + ":42780");
+            this.socket = new WebSocket(host);
             this.socket.onmessage = this.displayMessage.bind(this);
 
         },
