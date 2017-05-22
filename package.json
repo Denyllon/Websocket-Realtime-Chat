@@ -2,8 +2,11 @@
   "name": "ws-realtime-chat",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "6.2.0"
+  },
   "scripts": {
-    "start": "node js/ws-server.js",
+    "start": "node js/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
