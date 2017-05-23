@@ -6,12 +6,9 @@ const path = require('path');
 const PORT = process.env.PORT || 3000;
 
 // Routing
-const INDEX = path.join(__dirname, '/../index.html');
-const PUBLIC = path.join(__dirname, '/../')
-
+const PUBLIC = path.join(__dirname, '/../');
 
 const server = express()
-    // .get('/', (req, res) => res.sendFile(INDEX) )
     .use(express.static(PUBLIC))
     .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
