@@ -1,4 +1,3 @@
-// 
 const express = require('express');
 const SocketServer = require('ws').Server;
 const path = require('path');
@@ -8,10 +7,12 @@ const PORT = process.env.PORT || 3000;
 // Routing
 const PUBLIC = path.join(__dirname, '/../');
 
+// Server HTTP
 const server = express()
     .use(express.static(PUBLIC))
     .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
+// Server WebSocket
 const wss = new SocketServer({ server });
 
 wss.on('connection', function connection(ws) {
